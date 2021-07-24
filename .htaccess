@@ -1,0 +1,6 @@
+RewriteEngine On
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^create/task/([^/]*)$ /create.php?item=$1 [L]
+RewriteRule ^task/([^/]*)$ /read_one.php?id=$1 [L]
